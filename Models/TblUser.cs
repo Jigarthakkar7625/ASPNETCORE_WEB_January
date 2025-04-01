@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ASPNETCORE_WEB.Models;
 
-public class TblUser
+public partial class TblUser
 {
     public int UserId { get; set; }
 
@@ -13,7 +13,5 @@ public class TblUser
 
     public string? Password { get; set; }
 
-    public ICollection<TblRole> Roles { get; set; }
-
-    //public virtual ICollection<TblUserRole> TblUserRoles { get; set; } = new List<TblUserRole>();
+    public virtual ICollection<TblUserRole> TblUserRoles { get; set; } = new List<TblUserRole>();
 }

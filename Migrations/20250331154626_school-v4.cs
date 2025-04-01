@@ -1,37 +1,37 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿//using Microsoft.EntityFrameworkCore.Migrations;
 
-#nullable disable
+//#nullable disable
 
-namespace ASPNETCORE_WEB.Migrations
-{
-    /// <inheritdoc />
-    public partial class schoolv4 : Migration
-    {
-        /// <inheritdoc />
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.RenameColumn(
-                name: "RoleJigar",
-                table: "Role",
-                newName: "Role");
-        }
+//namespace ASPNETCORE_WEB.Migrations
+//{
+//    /// <inheritdoc />
+//    public partial class schoolv4 : Migration
+//    {
+//        /// <inheritdoc />
+//        protected override void Up(MigrationBuilder migrationBuilder)
+//        {
+//            migrationBuilder.RenameColumn(
+//                name: "RoleJigar",
+//                table: "Role",
+//                newName: "Role");
+//        }
 
-        /// <inheritdoc />
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.RenameColumn(
-                name: "Role",
-                table: "Role",
-                newName: "RoleJigar");
-        }
-    }
+//        /// <inheritdoc />
+//        protected override void Down(MigrationBuilder migrationBuilder)
+//        {
+//            migrationBuilder.RenameColumn(
+//                name: "Role",
+//                table: "Role",
+//                newName: "RoleJigar");
+//        }
+//    }
 
 
-    // EF Core
-    // Automapper
-    // Swagger
-    // Dependacy (Monoli)
-    // Middleware
-    // JWT
+//    // EF Core
+//    // Automapper
+//    // Swagger
+//    // Dependacy (Monoli)
+//    // Middleware
+//    // JWT
 
-}
+//}
