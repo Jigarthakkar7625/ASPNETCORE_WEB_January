@@ -7,19 +7,20 @@ namespace ASPNETCORE_WEB.Controllers
     public class HomeController : Controller
     {
 
-        private readonly AtcgsaWithoutAspnetauthContext _atcgsaWithoutAspnetauthContext;
+        //private readonly AtcgsaWithoutAspnetauthContext _atcgsaWithoutAspnetauthContext;
         private readonly ILogger<HomeController> _logger;
 
         // Constuctor dependancy
-        public HomeController(ILogger<HomeController> logger, AtcgsaWithoutAspnetauthContext atcgsaWithoutAspnetauthContext)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _atcgsaWithoutAspnetauthContext = atcgsaWithoutAspnetauthContext;
+            //_atcgsaWithoutAspnetauthContext = atcgsaWithoutAspnetauthContext;
         }
 
         public IActionResult Index()
         {
-            var a = _atcgsaWithoutAspnetauthContext.TblUsers.ToList();
+            //var a = _atcgsaWithoutAspnetauthContext.TblUsers.ToList();
+            
             return View();
         }
 

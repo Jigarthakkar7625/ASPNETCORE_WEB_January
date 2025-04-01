@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 // Connection string 
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<AtcgsaWithoutAspnetauthContext>(x => x.UseSqlServer(conn));
+builder.Services.AddDbContext<CodeFirstContext>(x => x.UseSqlServer(conn));
 
 
 var app = builder.Build();
