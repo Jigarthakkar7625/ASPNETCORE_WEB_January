@@ -1,5 +1,6 @@
 using ASPNETCORE_WEB.Models;
 using Microsoft.EntityFrameworkCore;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,12 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AtcgsaWithoutAspnetauthContext>(x => x.UseSqlServer(conn));
 
+
+builder.Services.AddTransient<ITransient, DependancyInjection>(); // AddTransient DI
+
+builder.Services.AddScoped<IScoped, DependancyInjection>(); // AddScoped DI
+
+builder.Services.AddSingleton<ISingleton, DependancyInjection>(); // AddSingleton DI
 
 var app = builder.Build();
 
